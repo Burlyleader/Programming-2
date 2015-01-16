@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML JS2</title>
+</head>
+<body>
+<script>
+function countThe(searchFor) {
+	var howMany = 0;
+	return function(searchIn) {
+		for (var i = 0; i < searchIn.legth; i++) {
+			if (searchIn[i] === searchFor) {
+				howMany ++;
+			}
+		}
+		return howMany;
+	};
+};
+
+var countTheBsIn = countThe("B");
+(countTheBsIn("BBC"));
+
+
+
+</script>
+</body>
+</html>

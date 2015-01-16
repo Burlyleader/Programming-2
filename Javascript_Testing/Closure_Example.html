@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML JS</title>
+</head>
+<body>
+<script>
+
+var fibonacci = (function(){ //This (function(){ starts an anonymous function which we will execute immediately
+  var results = [1,1]; //our variable for storing results, we store the first two results eliminating the standard if statement in fibonacci generator code; 
+  var fib = function(n) { //creating the function that we’ll ultimately want stored in fibonacci
+console.log(results); //only there so we can watch the function working
+if (results[n] > 0) //simple check to see if we have an answer in the array – not the best way to check, but works since we only will ever have positive values for fibonacci sequences (technically we should check for negative requests and error out.
+{ 
+return results[n];//if we have already calculated the result, return that 
+} else 
+{ 
+results[n] = fib(n-1) + fib(n-2); return results[n]; //if we don’t have a result, calculate it
+} 
+}; //end of fib function
+return fib; //return the fib function to be stored in the Fibonacci variable
+})() //closes anonymous function and executes it enclosing the variables;
+
+
+</script>
+</body>
+</html>

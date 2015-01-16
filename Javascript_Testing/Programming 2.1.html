@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML JS</title>
+</head>
+<body>
+<script>
+
+function distanceFrom(firstPoint) {
+	firstPoint = firstPoint || [0,0];
+	return function(secondPoint) {
+		return Math.sqrt(Math.pow(secondPoint[0] - firstPoint[0], 2) + Math.pow(secondPoint[1] - firstPoint[1], 2));
+	}
+};
+
+
+var a = [1, 3];
+var b = [3, 4];
+var c = [2, 8];
+
+var distanceFromATo = distanceFrom(a);
+var distanceFromBTo = distanceFrom(b);
+
+
+console.log(distanceFromATo(b));
+console.log(distanceFromATo(c));
+console.log(distanceFromBTo(a));
+
+</script>
+</body>
+</html>
