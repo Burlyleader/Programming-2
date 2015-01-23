@@ -6,7 +6,7 @@ path {
   fill: #00FFFF;
   stroke: #fff;
   stroke: #000;
-  stroke-width: 3px;
+  stroke-width: 1px;
 }
 
 </style>
@@ -51,6 +51,8 @@ d3.timer(function() {
       .attr("d", function(d) { return "M" + d.polygon.join("L") + "Z"; });
 });
 
+    
+//Idk how to math so I have no idea how this works other than that it changes the size of the faces
 function icosahedronFaces() {
   var faces = [],
       y = Math.atan2(1, 2) * 180 / Math.PI;
